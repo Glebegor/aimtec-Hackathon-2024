@@ -1,11 +1,11 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
+  "port": 3000,
+  "host": "localhost",
+  "database": {
+    "host": "localhost",
+    "port": 5555,
+    "name": "hachathon-aimtec-2024",
+    "username": "admin",
+    "sslmode": "disable"
   }
 }
-å

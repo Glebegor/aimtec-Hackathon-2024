@@ -1,2 +1,3 @@
-const express = require('express');
-const app = express();
+const config = require("./Presentation/bootstrap/config.js");
+
+console.log(config);
