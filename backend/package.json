@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Back for hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Hlib Arseniuk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
