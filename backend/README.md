@@ -14,7 +14,7 @@ Error response [404, 500, 402, 401]
     "message": "Error message"
 }
 ```
-### Endpoints
+### Endpoints 
 /api/v1 - public routes</br>
 /api/v2 - private routes</br>
 /api/ws - websockets</br>
@@ -85,7 +85,7 @@ Error response | Error response | ---
 message request json:
 ```
 {
-    "image": "base64"
+    "message": "base64"
 }
 ```
 
