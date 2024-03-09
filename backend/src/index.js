@@ -7,7 +7,7 @@ const api1 = require("./Controllers/Api1Controller.js");
 const api2 = require("./Controllers/Api1Controller.js");
 
 const app = express();
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '50mb'}))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 

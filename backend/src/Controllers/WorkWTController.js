@@ -2,7 +2,7 @@ const express = require('express')
 const NeuralApi = "http://127.0.0.1:5000"
 
 const router = express.Router();
-router.post("/TextToS", async (req,res) => {
+router.post("/TextToSpeech", async (req,res) => {
   const { text, textLanguage, textToLanguage } = req.body;
 
   if (!text || !textLanguage || !textToLanguage) {
@@ -36,7 +36,7 @@ router.post("/TextToS", async (req,res) => {
 
 });
 
-router.post("/SpeechToT", async (req,res) => {
+router.post("/SpeechToText", async (req,res) => {
   const { speech, speechLanguage, speechToLanguage } = req.body;
 
   if (!speech || !speechLanguage || !speechToLanguage) {
