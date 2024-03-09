@@ -1,13 +1,19 @@
-const config = require("./Presentation/Bootstrap/config.js");
+const config = require("./Bootstrap/config.js");
 const express = require("express");
-const app = express();
-const db = require("./Presentation/Bootstrap/db.js");
-const router = require("./Presentation/Controllers/Controller.js").NewController().router;
-app.get("/", (req, res) => {
-    res.send("!!Hello world!!")
-})
-app.use(router) // Controller
+const bodyParser = require('body-parser')
+var cors = require('cors')
 
-app.listen(config.default.port, () => {
-        console.log(`Server is running on port http://localhost:${config.default.port}`);
+const api1 = require("./Controllers/Api1Controller.js");
+const api2 = require("./Controllers/Api1Controller.js");
+
+const app = express();
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors())
+
+app.use("/api/v1", api1);
+app.use("/api/v2", api2);
+
+app.listen(config.port, () => {
+        console.log(`Server is running on port http://localhost:${config.port}`);
 })

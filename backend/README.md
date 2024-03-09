@@ -63,20 +63,6 @@ Request | {"speech": "1230809481092834", "speechLanguage": "GE", "speechToLangua
 Response | {"text":"Some text", "textLanguage": "EN"}                                       | ---
 Error response | Error response | ---
 
-##### /SymbolsToText - POST
-Type | Json                          | Headers
---- |-------------------------------| ---
-Request | {"image": "1230809481092834"} | --
-Response | {"text":"Some text", "textLanguage": "EN"} | ---
-Error response | Error response | ---
-
-##### /TextToSymbols - POST
-Type | Json                                              | Headers
---- |---------------------------------------------------| ---
-Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"} | --
-Response | {"image":"1230809481092834"}                      | ---
-Error response | Error response | ---
-
 #### /translate - v1
 Working with translations.
 ##### /translate - POST
