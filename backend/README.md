@@ -40,6 +40,11 @@ Login.
 Error response | Error response | ---
 ##### /refresh - POST
 Refresh token.
+Type     | Json                                                                                                                      | Headers
+----------|---------------------------------------------------------------------------------------------------------------------------|--------
+Request  | {"refresh": "wqejkh1jk23;12",}                                                                         | ---    
+Response | {"refresh": "refresh", "access": "access"} | ---
+Error response | Error response | ---
 
 #### /workWT - v1
 Work with texts, speeches and symbols.
