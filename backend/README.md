@@ -28,8 +28,8 @@ Registration.
 Type | Json                                                                    | Headers
 --- |-------------------------------------------------------------------------| ---
 Request | {"username": "nameeee","password": "123321", "email":"email@email.com"} | --
-Response | {"message": "ok"}                                                       | ---
-
+Response | Success response                                                        | ---
+Error response | Error response                                                          | ---
 ##### /login - POST
 Login.
 
@@ -37,7 +37,7 @@ Login.
 ----------|---------------------------------------------------------------------------------------------------------------------------|--------
  Request  | {"email": "email@email.com","password": "123321"}                                                                         | ---    
  Response | {"refresh": "123123dwqo", "access": "123e1231", "except": 36000000 (microsec), "exceptTime": 1231908402213912 (microsec)} | ---
-
+Error response | Error response | ---
 ##### /refresh - POST
 Refresh token.
 
@@ -49,24 +49,28 @@ Type | Json                                                                     
 --- |----------------------------------------------------------------------------------| ---
 Request | {"text":"Some text", "textLanguage": "EN", "textToLanguage": "CZ"}               | --
 Response | {"speech": "1230809481092834", "speechLanguage": "EN"} | ---
+Error response | Error response | ---
 
 ##### /SpeachToText - POST
 Type | Json                                                                             | Headers
 --- |----------------------------------------------------------------------------------| ---
 Request | {"speech": "1230809481092834", "speechLanguage": "GE", "speechToLanguage": "EN"} | --
 Response | {"text":"Some text", "textLanguage": "EN"}                                       | ---
+Error response | Error response | ---
 
 ##### /SymbolsToText - POST
 Type | Json                          | Headers
 --- |-------------------------------| ---
 Request | {"image": "1230809481092834"} | --
 Response | {"text":"Some text", "textLanguage": "EN"} | ---
+Error response | Error response | ---
 
 ##### /TextToSymbols - POST
 Type | Json                                              | Headers
 --- |---------------------------------------------------| ---
 Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"}} | --
 Response | {"image":"1230809481092834"}                      | ---
+Error response | Error response | ---
 
 #### /translate - v1
 Working with translations.
@@ -76,4 +80,6 @@ Type | Json                                                                | Hea
 --- |---------------------------------------------------------------------| ---
 Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"} | --
 Response | {"text": "Some text", "textLanguage": "EN"}                                        | ---
+Error response | Error response | ---
+
 ## ENV
