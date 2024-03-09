@@ -1,49 +1,69 @@
-from flask import Flask,request
-#import requests as request
-
+from flask import Flask, request
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 def hello_world():
     return "<p>Hello !</p>"
 
-@app.route('/form_example', methods=['POST'])
-def form_example():
-    print(request.form.get('name'))
-    print(request.form.get('age'))
-    return request.form
+class WorkWT:
+    @staticmethod
+    @app.route('/TextToSpeach', methods=['POST'])
+    def text_to_speech():
+        data = request.get_json()
+        speech = data.get("text", "")
+        textLanguage = data.get("textLanguage", "")
+        textToLanguage = data.get("textToLanguage", "")
+        # Zpracování textu na zvuk
+        # ...
+        Response["speech"]        =AWS_TextToSpeech()
+        Response["speechLanguage"]=AWS_speechLanguage()
+        Response={"speech": "1230809481092834", "speechLanguage": "EN"}
+        return Response
 
-@app.route('/TextToSpeach', methods=['POST'])
-#text vrati odpoved na zvuk 
-def TextToSpeach():
-    data = request.get_json()
-    data["speach"]
-    return data["speach"]
+    @staticmethod
+    @app.route('/SpeachToText', methods=['POST'])
+    def speech_to_text():
+        data             = request.get_json()
+        speech           = data.get("speech", "")
+        speechLanguage   = data.get("speechLanguage", "")
+        speechToLanguage = data.get("speechToLanguage", "")
+        # Zpracování zvuku na text
+        # ...
 
-@app.route('/SpeachToText', methods=['POST'])
-#zvuk a vrati text
-def SpeachToText():
-    data = request.get_json()
-    data["text"]
-    return data["text"]
+        Response["text"]         = AWS_SpeechToText()
+        Response["textLanguage"] = AWS_textLanguage()
+        Response={"text":"Some text", "textLanguage": "EN"}	
+        return Response
 
-@app.route('/SymbolsToText', methods=['POST'])
-def SymbolsToText():
-    data = request.get_json()
-    data["text"]
-    return data["text"]
+    @staticmethod
+    @app.route('/SymbolsToText', methods=['POST'])
+    def symbols_to_text():
+        data = request.get_json()
+        symbols = data.get("symbols", "")
+        
+        # Zpracování symbolů na text
+        # ...
+        Response["text"]        =AWS_SymbolsToText()
+        Response["textLanguage"]=AWS_textLanguage()
+        Response={"text":"Some text", "textLanguage": "EN"}
+        return Response
 
-@app.route('/TextToSymbols', methods=['POST'])
-def TextToSymbols():
-    data = request.get_json()
-    data["symbols"]
-    return data["symbols"]
+    @staticmethod
+    @app.route('/TextToSymbols', methods=['POST'])
+    def text_to_symbols():
+        data = request.get_json()
+        text = data.get("text", "")
+        # Zpracování textu na symboly
+        # ...
+        Response["image"]=AWS_TextToSymbols()
+        Response={"image":"1230809481092834"}
+        return Response
 
+controllerW = WorkWT()
 
-
-
-
-#parsing JSON
-#
-#
+if __name__ == "__main__":
+    app.run(port=4000)
