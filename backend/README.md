@@ -17,6 +17,7 @@ Error response [404, 500, 402, 401]
 ### Endpoints
 /api/v1 - public routes</br>
 /api/v2 - private routes</br>
+Example: {HOSTING}/api/v1/auth/registration
 
 #### /auth - v1
 
