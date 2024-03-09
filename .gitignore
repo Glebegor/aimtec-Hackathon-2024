@@ -1,0 +1,7 @@
+.env
+.aws.credentials.env
+
+__token__
+node_modules
+credentials.json
+```
