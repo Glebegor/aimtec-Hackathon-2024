@@ -68,7 +68,7 @@ Error response | Error response | ---
 ##### /TextToSymbols - POST
 Type | Json                                              | Headers
 --- |---------------------------------------------------| ---
-Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"}} | --
+Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"} | --
 Response | {"image":"1230809481092834"}                      | ---
 Error response | Error response | ---
 
