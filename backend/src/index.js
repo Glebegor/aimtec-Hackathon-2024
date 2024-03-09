@@ -18,8 +18,13 @@ app.use("/api/v2", api2);
 
 // app.use("/api/ws", websockets);
 app.ws('/api/ws/stream', function(ws, req) {
+        console.log("Websocket connection established");
         ws.on('message', function(msg) {
+                console.log("Websocket connection doing");
                 ws.send(msg);
+        });
+        ws.on('close', function() {
+                console.log("Websocket connection closed");
         });
 })
 

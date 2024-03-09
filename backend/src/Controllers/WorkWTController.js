@@ -28,7 +28,7 @@ router.post("/TextToSpeech", async (req,res) => {
 
     console.log();
 
-    res.status(200).json({speech: "speech", speechLanguage:"speechLanguage"});
+    res.status(200).json({speech: speech, speechLanguage: speechLanguage});
   } catch (error) {
     console.error("Error:", error.message);
     res.status(500).json({"message": "Internal server error"});
