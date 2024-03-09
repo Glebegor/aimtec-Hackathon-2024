@@ -5,6 +5,7 @@ var cors = require('cors')
 
 const api1 = require("./Controllers/Api1Controller.js");
 const api2 = require("./Controllers/Api1Controller.js");
+const websockets = require("./Controllers/WebsocketsController.js");
 
 const app = express();
 app.use(bodyParser.json({limit: '50mb'}))
@@ -13,6 +14,8 @@ app.use(cors())
 
 app.use("/api/v1", api1);
 app.use("/api/v2", api2);
+
+app.use("/api/ws", websockets);
 
 app.listen(config.port, () => {
         console.log(`Server is running on port http://localhost:${config.port}`);

@@ -17,6 +17,7 @@ Error response [404, 500, 402, 401]
 ### Endpoints
 /api/v1 - public routes</br>
 /api/v2 - private routes</br>
+/api/ws - websockets</br>
 Example: {HOSTING}/api/v1/auth/registration
 
 #### /auth - v1
@@ -63,14 +64,36 @@ Request | {"speech": "1230809481092834", "speechLanguage": "GE", "speechToLangua
 Response | {"text":"Some text", "textLanguage": "EN"}                                       | ---
 Error response | Error response | ---
 
-#### /translate - v1
-Working with translations.
-##### /translate - POST
+[//]: # (#### /translate - v1)
 
-Type | Json                                                                | Headers
---- |---------------------------------------------------------------------| ---
-Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"} | --
-Response | {"text": "Some text", "textLanguage": "EN"}                                        | ---
-Error response | Error response | ---
+[//]: # (Working with translations.)
+
+[//]: # (##### /translate - POST)
+
+[//]: # ()
+[//]: # (Type | Json                                                                | Headers)
+
+[//]: # (--- |---------------------------------------------------------------------| ---)
+
+[//]: # (Request | {"text": "Some text", "textLanguage": "EN", "textToLanguage": "CZ"} | --)
+
+[//]: # (Response | {"text": "Some text", "textLanguage": "EN"}                                        | ---)
+
+[//]: # (Error response | Error response | ---)
+
+#### /stream - ws
+message request json:
+```
+{
+    "image": "base64"
+}
+```
+
+return json:
+```
+{
+    "word": "SOMESHIT"
+}
+```
 
 ## ENV
