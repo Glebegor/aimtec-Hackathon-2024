@@ -92,7 +92,7 @@ message request json:
 return json:
 ```
 {
-    "word": "SOMESHIT"
+    "word": "word"
 }
 ```
 
