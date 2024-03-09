@@ -56,7 +56,7 @@ Request | {"text":"Some text", "textLanguage": "EN", "textToLanguage": "CZ"}    
 Response | {"speech": "1230809481092834", "speechLanguage": "EN"} | ---
 Error response | Error response | ---
 
-##### /SpeachToText - POST
+##### /SpeechToText - POST
 Type | Json                                                                             | Headers
 --- |----------------------------------------------------------------------------------| ---
 Request | {"speech": "1230809481092834", "speechLanguage": "GE", "speechToLanguage": "EN"} | --
